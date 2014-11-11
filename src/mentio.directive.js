@@ -199,6 +199,12 @@ angular.module('mentio', [])
                                 });
                             }
 
+                            if (event.which === 16 || event.which === 222) {
+                                activeMenuScope.$apply(function () {
+                                    activeMenuScope.hideMenu();
+                                });
+                            }
+
                             if (event.which === 40) {
                                 event.preventDefault();
                                 activeMenuScope.$apply(function () {
